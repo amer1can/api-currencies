@@ -34,7 +34,7 @@ export default {
         inUsd: 0,
       }
       this.$store.commit('addCurrency', data)
-      this.$store.commit('addGlobalCurrency', this.cur)
+      this.$store.dispatch('addAsyncGlobCur', {name: this.cur.toUpperCase()})
       this.cur = ''
       this.val = ''
       console.log(this.$store.state.globalCurrency)

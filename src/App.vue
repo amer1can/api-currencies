@@ -23,6 +23,7 @@ export default {
     }
   },
   mounted() {
+    console.log(this.$store.state.globalCurrency)
     // fetch(`https://api.nomics.com/v1/currencies/ticker?key=${this.api}&ids=BTC,ETH,SOL&interval=1d,30d`)
     //     .then(response => response.json())
     //     .then(data => {

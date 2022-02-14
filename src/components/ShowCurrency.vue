@@ -6,18 +6,17 @@
 
     <div v-else class="cur-list d-flex">
       <div v-for="(cur, idx) in this.$store.state.myCurrency" :key="idx" class="cur-card">
-        <h2>{{ cur.name }}</h2>
-        <h1>{{ cur.value }}</h1>
-        <hr>
-        <h6>{{ cur.addDate }}</h6>
+        <CurCard :currency="cur" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import CurCard from "@/components/CurCard";
 export default {
   name: "ShowCurrency",
+  components: {CurCard},
   data() {
     return {
       api: '38db08c6c20c307a4a035a2c8fa14002142f5175',
